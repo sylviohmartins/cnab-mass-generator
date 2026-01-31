@@ -1,12 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CNAB Mass Generator</title>
+  <meta charset="UTF-8">
+  <title>Gerador de Massas CNAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <h1>Gerador de Massas CNAB</h1>
+
+  <div id="app">
+    <div id="layouts-section" class="section">
+      <h2>Layouts</h2>
+      <button id="new-layout-btn">Novo Layout</button>
+      <table id="layouts-table">
+        <thead>
+          <tr><th>Nome</th><th>Ações</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="layout-form-section" class="section hidden">
+      <h2 id="layout-form-title">Novo Layout</h2>
+      <form id="layout-form">
+        <label>Nome: <input type="text" id="layout-name" required></label>
+        <table id="fields-table">
+          <thead>
+            <tr><th>Campo</th><th>Início</th><th>Tamanho</th><th>Ações</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button type="button" id="add-field-btn">Adicionar Campo</button>
+        <div class="form-actions">
+          <button type="submit">Salvar Layout</button>
+          <button type="button" id="cancel-layout-btn">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="records-section" class="section hidden">
+      <h2>Registros - <span id="current-layout-name"></span></h2>
+      <button id="new-record-btn">Novo Registro</button>
+      <button id="export-records-btn">Exportar Arquivo</button>
+      <table id="records-table">
+        <thead>
+          <tr><th>Conteúdo</th><th>Ações</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="record-form-section" class="section hidden">
+      <h2 id="record-form-title">Novo Registro</h2>
+      <form id="record-form">
+        <div id="record-fields-container"></div>
+        <div class="form-actions">
+          <button type="submit">Salvar Registro</button>
+          <button type="button" id="cancel-record-btn">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="ruler-section" class="section hidden">
+      <h2>Régua de Campos</h2>
+      <div id="ruler-container"></div>
+      <button id="close-ruler-btn">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
