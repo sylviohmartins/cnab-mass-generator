@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+#app table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#app th, #app td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#app th {
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.field-row, .record-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.field-row input[type="text"],
+.field-row input[type="number"],
+.record-row input[type="text"] {
+  flex: 1;
+  padding: 4px 6px;
+}
+
+.field-row button,
+.record-row button {
+  padding: 4px 8px;
+}
+
+#ruler-section {
+  margin-top: 20px;
+}
+
+.ruler {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.segment {
+  position: relative;
+  border: 1px solid #999;
+  padding: 4px;
+  margin-right: 2px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.segment.header {
+  background-color: #cce5ff;
+}
+
+.segment.body {
+  background-color: #d4edda;
+}
+
+.segment .label {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.segment .pos {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.ruler-scale {
+  display: flex;
+  margin-top: 10px;
+}
+
+.ruler-scale .tick {
+  border-right: 1px solid #666;
+  padding-right: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+}
