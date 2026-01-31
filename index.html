@@ -27,12 +27,12 @@
         <label>Nome: <input type="text" id="layout-name" required></label>
         <table id="fields-table">
           <thead>
-            <tr><th>Campo</th><th>Início</th><th>Tamanho</th><th>Ações</th></tr>
+            <tr><th>Campo</th><th>Início</th><th>Tamanho</th><th>Tipo</th><th>Ações</th></tr>
           </thead>
-          <tbody></tbody>
+        <tbody></tbody>
         </table>
         <button type="button" id="add-field-btn">Adicionar Campo</button>
-        <div class="form-actions">
+        <div>
           <button type="submit">Salvar Layout</button>
           <button type="button" id="cancel-layout-btn">Cancelar</button>
         </div>
@@ -40,22 +40,23 @@
     </div>
 
     <div id="records-section" class="section hidden">
-      <h2>Registros - <span id="current-layout-name"></span></h2>
+      <h2>Registros</h2>
+      <select id="layout-select"></select>
       <button id="new-record-btn">Novo Registro</button>
-      <button id="export-records-btn">Exportar Arquivo</button>
       <table id="records-table">
         <thead>
-          <tr><th>Conteúdo</th><th>Ações</th></tr>
+          <tr><th>#</th><th>Dados</th><th>Ações</th></tr>
         </thead>
         <tbody></tbody>
       </table>
+      <button id="download-records-btn">Baixar Arquivo CNAB</button>
     </div>
 
     <div id="record-form-section" class="section hidden">
       <h2 id="record-form-title">Novo Registro</h2>
       <form id="record-form">
-        <div id="record-fields-container"></div>
-        <div class="form-actions">
+        <div id="record-fields"></div>
+        <div>
           <button type="submit">Salvar Registro</button>
           <button type="button" id="cancel-record-btn">Cancelar</button>
         </div>
@@ -63,9 +64,8 @@
     </div>
 
     <div id="ruler-section" class="section hidden">
-      <h2>Régua de Campos</h2>
-      <div id="ruler-container"></div>
-      <button id="close-ruler-btn">Fechar</button>
+      <h2>Visualização Ruler</h2>
+      <div id="ruler-view"></div>
     </div>
   </div>
 
